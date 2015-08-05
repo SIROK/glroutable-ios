@@ -362,7 +362,6 @@
         return [self.cachedRoutes objectForKey:url];
     }
     NSURL *givenUrl = [NSURL URLWithString:url];
-    NSString *query = givenUrl.query;
     if (givenUrl.query) {
         url = [url stringByReplacingOccurrencesOfString:[NSString stringWithFormat:@"?%@",givenUrl.query ]withString:@""];
     }
