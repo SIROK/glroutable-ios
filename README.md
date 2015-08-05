@@ -22,7 +22,7 @@ pod "GLRoutable"
 
 ## Author
 
-TABATAKATSUTOSHI, t.katsu22@gmail.com
+TABATAKATSUTOSHI, tabata@sirok.co.jp
 
 ## License
 
