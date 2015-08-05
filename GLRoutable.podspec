@@ -10,14 +10,12 @@
 Pod::Spec.new do |s|
   s.name             = "GLRoutable"
   s.version          = "0.1.0"
-  s.summary          = "A short description of GLRoutable."
+  s.summary          = "GLRoutable is a library to make it easy to create deep link"
   s.description      = <<-DESC
-                       An optional longer description of GLRoutable
-
-                       * Markdown format.
-                       * Don't worry about the indent, we strip it!
+                       GLRoutable is a library to make it easy to create deep link
+                       You can use this by using cocoapods
                        DESC
-  s.homepage         = "https://github.com/SIROK/GLRoutable"
+  s.homepage         = "https://github.com/SIROK/glroutable-ios"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "TABATAKATSUTOSHI" => "t.katsu22@gmail.com" }
