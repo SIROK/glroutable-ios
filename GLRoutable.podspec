@@ -9,7 +9,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "GLRoutable"
-  s.version          = "0.1.0"
+  s.version          = "0.1.1"
   s.summary          = "GLRoutable is a library to make it easy to create deep link"
   s.description      = <<-DESC
                        GLRoutable is a library to make it easy to create deep link
