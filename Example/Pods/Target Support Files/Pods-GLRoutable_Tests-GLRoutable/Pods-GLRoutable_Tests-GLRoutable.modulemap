@@ -1,0 +1,6 @@
+framework module GLRoutable {
+  umbrella header "Pods-GLRoutable_Tests-GLRoutable-umbrella.h"
+
+  export *
+  module * { export * }
+}

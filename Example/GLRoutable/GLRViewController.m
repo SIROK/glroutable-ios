@@ -14,6 +14,14 @@
 
 @implementation GLRViewController
 
+//called by GLRouter before viewDidLoad event
+- (id)initWithRouterParams:(NSDictionary *)params {
+    if ((self = [self initWithNibName:nil bundle:nil])) {
+        self.title = @"SAMPLE";
+    }
+    return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];

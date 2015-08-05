@@ -7,12 +7,39 @@
 //
 
 #import "GLRAppDelegate.h"
+#import "GLRViewController.h"
+#import <GLRoutable/Routable.h>
 
 @implementation GLRAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    
+    UINavigationController *nav = [[UINavigationController alloc] initWithNibName:nil bundle:nil];
+    [[Routable sharedRouter] map:@"test/:id/:name" toController:[GLRViewController class]];
+    [[Routable sharedRouter] map:@"callbacktest/:id/:name" toCallback:^(NSDictionary *params) {
+        NSString *id = [params objectForKey:@"id"];
+        NSString *value = [params objectForKey:@"name"];
+        NSString *paramValue = [params objectForKey:@"key"];
+    }];
+    [[Routable sharedRouter] setRootUrl:@"glroutable://"];
+    [[Routable sharedRouter] setNavigationController:nav];
+    
+    [self.window setRootViewController:nav];
+    [self.window makeKeyAndVisible];
+    
+    
+//    [[Routable sharedRouter] open:@"callbacktest/1234/gl?key=value&k=v"];
+//    [[Routable sharedRouter] open:@"test/1234/sirok?gl=value&k=v"];
+    /*
+     you can test by serching "glroutable://test/1234/sirok?gl=value&k=v" on safari
+     */
+
+    return YES;
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
+    [[Routable sharedRouter] openUrl:url];
     return YES;
 }
 
