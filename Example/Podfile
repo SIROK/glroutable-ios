@@ -1,0 +1,15 @@
+source 'https://github.com/CocoaPods/Specs.git'
+use_frameworks!
+
+target 'GLRoutable_Example', :exclusive => true do
+  pod "GLRoutable", :path => "../"
+end
+
+target 'GLRoutable_Tests', :exclusive => true do
+  pod "GLRoutable", :path => "../"
+
+  pod 'Specta'
+  pod 'Expecta'
+  pod 'FBSnapshotTestCase'
+  pod 'Expecta+Snapshots'
+end
